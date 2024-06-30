@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kolokvijum 2</title>
+    <style>
+        .feedback {
+            display: inline;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .radio-buttons {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        .checkbox-section {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label>Izaberi font i boju:</label>
+        <select id="colorSelect">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+
+        <select id="fontSelect">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+    </div>
+   <br>
+   <br>
+    <fieldset>
+        <legend>Unos podataka</legend>
+        <label for="fullName">Puno ime:</label>
+        <input type="text" id="fullName" required>
+        <span id="nameFeedback" class="feedback"></span>
+
+        <br>
+
+        <label for="customFormat">Sifra:</label>
+        <input type="text" id="customFormat" required>
+        <span id="formatFeedback" class="feedback"></span>
+
+        <fieldset style="margin-top: 20px;">
+            <legend>Ocenite svoje znanje Jave</legend>
+            <div class="radio-buttons" id="javaRating">
+                <label><input type="radio" name="javaRating" value="10"> 10</label>
+                <label><input type="radio" name="javaRating" value="9"> 9</label>
+                <label><input type="radio" name="javaRating" value="8"> 8</label>
+                <label><input type="radio" name="javaRating" value="7"> 7</label>
+                <label><input type="radio" name="javaRating" value="6"> 6</label>
+                <label><input type="radio" name="javaRating" value="5"> 5</label>
+            </div>
+        </fieldset>
+
+        <fieldset style="margin-top: 20px;">
+            <legend>Označite koje oblasti su Vam interesantne</legend>
+            <div class="checkbox-section" id="interests">
+                <label><input type="checkbox" name="interests" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="interests" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="interests" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" name="interests" value="JQuery"> jQuery</label>
+            </div>
+        </fieldset>
+
+        <input type="submit" id="submitButton" value="Potvrdi">
+
+        <p id="errorMessage"></p> <!-- Added element for displaying error messages -->
+        <p id="hoverMessage"></p> <!-- Added element for displaying hover messages -->
+        <p id="finalMessage"></p>
+    </fieldset>
+
+    <script src="script.js"></script>
+</body>
+</html>
